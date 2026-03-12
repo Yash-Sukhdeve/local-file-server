@@ -1,0 +1,25 @@
+# Binaries and archives
+bin/
+*.tgz
+*.tar.gz
+*.zip
+*.exe
+
+# FileBrowser data and secrets
+fb_data/
+fb_admin_password.txt
+*.db
+
+# Logs and caches
+logs/
+*.log
+.cache/
+
+# Editors/IDE
+.vscode/
+.idea/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db

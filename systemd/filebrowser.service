@@ -1,0 +1,18 @@
+[Unit]
+Description=FileBrowser (user)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Ensure the SSD is mounted and share directory exists
+ExecStartPre=/usr/bin/mountpoint -q /media/lab2208/ssd
+ExecStartPre=/usr/bin/test -d /media/lab2208/ssd/local_server/shared
+ExecStart=/media/lab2208/ssd/local_server/bin/filebrowser -d /media/lab2208/ssd/local_server/fb_data/filebrowser.db
+WorkingDirectory=/media/lab2208/ssd/local_server
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
+
