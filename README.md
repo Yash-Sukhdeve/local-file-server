@@ -2,6 +2,11 @@
 
 A lightweight, browser-based file server for your LAN using FileBrowser. Supports authenticated access, large file uploads (TUS chunking with resume), and runs as a user-level systemd service.
 
+## Demo
+![Web UI](docs/ui.png)
+
+Replace `docs/ui.png` with a screenshot or add `docs/demo.gif` for an animated demo. See `docs/capture-demo.md` for quick capture commands.
+
 ## Layout
 - Root directory: `/media/lab2208/ssd/local_server`
 - Share path (web root): `shared/`
@@ -69,4 +74,3 @@ systemctl --user start filebrowser
 - Large uploads use TUS chunking (default 100 MB chunks; configurable).
 - For LAN discoverability, you can optionally add an Avahi service file to advertise `http://<hostname>.local:8090`.
 - Security: Passwords and the database are ignored by git to avoid leaking secrets.
-
